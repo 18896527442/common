@@ -12,8 +12,6 @@
     <properties>
         <java.version>8</java.version>
         <knife4j.version>3.0.2</knife4j.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>

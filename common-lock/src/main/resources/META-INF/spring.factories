@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.smart.common.lock.config.RedissonConfiguration
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ll</groupId>
+    <artifactId>common</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>common-core</module>
+        <module>common-redis</module>
+        <module>common-sms</module>
+        <module>common-mail</module>
+        <module>common-wxsdk</module>
+        <module>common-upload</module>
+        <module>common-swagger</module>
+        <module>common-utils</module>
+        <module>common-spring-web</module>
+        <module>common-lock</module>
+        <module>common-rabbitmq</module>
+        <module>common-mybatis</module>
+        <module>common-generator</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-generator" />
+        <module name="common-upload" />
+        <module name="common-rabbitmq" />
+        <module name="common-utils" />
+        <module name="common-spring-web" />
+        <module name="common-redis" />
+        <module name="common-lock" />
+        <module name="common-mybatis" />
+        <module name="common-wxsdk" />
+        <module name="common-swagger" />
+        <module name="common-mail" />
+        <module name="common-core" />
+        <module name="common-sms" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.5" />
+      <module name="common-core" target="8" />
+      <module name="common-generator" target="8" />
+      <module name="common-lock" target="8" />
+      <module name="common-mail" target="1.5" />
+      <module name="common-mybatis" target="8" />
+      <module name="common-rabbitmq" target="8" />
+      <module name="common-redis" target="1.5" />
+      <module name="common-sms" target="1.5" />
+      <module name="common-spring-web" target="8" />
+      <module name="common-swagger" target="1.5" />
+      <module name="common-upload" target="1.5" />
+      <module name="common-utils" target="8" />
+      <module name="common-wxsdk" target="1.5" />
+      <module name="utils" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

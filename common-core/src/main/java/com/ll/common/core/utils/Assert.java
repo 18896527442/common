@@ -923,6 +923,6 @@ public class Assert {
 
 
     private static BusinessException newBusinessException(String errorMsgTemplate, Object... params){
-        return new SmartDataErrorException(errorMsgTemplate,params);
+        return new DataErrorException(errorMsgTemplate,params);
     }
 }

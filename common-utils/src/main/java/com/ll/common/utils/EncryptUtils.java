@@ -22,7 +22,7 @@ public final class EncryptUtils {
     public static String decodeRSAPrivateKey(String content, String privateKey) {
         if (StringUtils.isEmpty(content)) {
             //todo
-           // throw new BusinessException("密文为空");
+            // throw new BusinessException("密文为空");
         }
         RSA rsa = SecureUtil.rsa(privateKey, null);
         return rsa.decryptStr(content, KeyType.PrivateKey);
@@ -30,7 +30,7 @@ public final class EncryptUtils {
 
     public static String decodeRSAPrivateKey(String content) {
         if (StringUtils.isEmpty(content)) {
-         //   throw new BusinessException("密文为空");
+            //   throw new BusinessException("密文为空");
         }
         RSA rsa = SecureUtil.rsa(RSA_PRIVATE_KEY, null);
         return rsa.decryptStr(content, KeyType.PrivateKey);
@@ -42,13 +42,13 @@ public final class EncryptUtils {
         Long expireMillis = DEFAULT_TIMESTAMP_EXPIRE_MINUTES < 0 ? diffMillis : DEFAULT_TIMESTAMP_EXPIRE_MINUTES * 60 * 1000;
         if (diffMillis.compareTo(expireMillis) > 0) {
             //todo
-         //   throw new BusinessException("时间戳已失效");
+            //   throw new BusinessException("时间戳已失效");
         }
         String decodedContent = decodeRSAPrivateKey(content);
         if (StringUtils.isEmpty(decodedContent) || StringUtils.length(decodedContent) < DEFAULT_TIMESTAMP_LENGTH) {
-         //   throw new BusinessException("原文格式错误");
+            //   throw new BusinessException("原文格式错误");
         }
-        if (equals(String.valueOf(timestamp), decodedContent.substring(0, DEFAULT_TIMESTAMP_LENGTH - 1))) {
+        if (StringUtils.equals(String.valueOf(timestamp), decodedContent.substring(0, DEFAULT_TIMESTAMP_LENGTH - 1))) {
             //throw new BusinessException("时间戳不一致");
         }
         return decodedContent.substring(DEFAULT_TIMESTAMP_LENGTH);

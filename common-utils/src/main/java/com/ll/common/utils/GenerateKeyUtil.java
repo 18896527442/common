@@ -4,6 +4,7 @@ import cn.hutool.core.codec.Base64;
 import cn.hutool.core.io.FileUtil;
 import org.apache.commons.io.FileUtils;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -65,7 +66,16 @@ public class GenerateKeyUtil {
         try {
             // 将文件内容转为字符串
             InputStream resourceAsStream = GenerateKeyUtil.class.getClassLoader().getResourceAsStream(filePath);
-            String keyString = new String(resourceAsStream.readAllBytes(), StandardCharsets.UTF_8);
+            ByteArrayOutputStream result = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = resourceAsStream.read(buffer)) != -1) {
+                result.write(buffer, 0, length);
+            }
+            String keyString = result.toString(String.valueOf(StandardCharsets.UTF_8));
+
+            //jdk8以上
+            //String keyString = new String(resourceAsStream.readAllBytes(), StandardCharsets.UTF_8);
 
             return loadPublicKeyFromString(keyString);
         } catch (Exception e) {

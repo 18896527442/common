@@ -1,6 +1,6 @@
 package com.ll.common.utils;
 
-import com.smart.common.lock.client.RedissonLockClient;
+import com.ll.common.lock.client.RedissonLockClient;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

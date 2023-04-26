@@ -6,7 +6,7 @@ import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MetaObjectHandler implements MetaObjectHandler {
+public class SmartMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         this.fillStrategy(metaObject, "createTime", DateUtil.current());
@@ -22,7 +22,7 @@ public class MetaObjectHandler implements MetaObjectHandler {
     }
 
     @Override
-    public MetaObjectHandler fillStrategy(MetaObject metaObject, String fieldName, Object fieldVal) {
+    public SmartMetaObjectHandler fillStrategy(MetaObject metaObject, String fieldName, Object fieldVal) {
         try{
             Object value = metaObject.getValue(fieldName);
             if (null != value) return this;

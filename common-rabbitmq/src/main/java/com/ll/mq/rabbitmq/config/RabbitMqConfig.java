@@ -1,7 +1,7 @@
 package com.ll.mq.rabbitmq.config;
 
 import com.ll.mq.rabbitmq.config.mqtoken.TransmitUserTokenFilter;
-import com.ll.mq.rabbitmq.event.RemoteApplicationEvent;
+import com.ll.mq.rabbitmq.event.ReRemoteApplicationEvent;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
@@ -19,7 +19,7 @@ import java.util.UUID;
  * @author zyf
  */
 @Configuration
-@RemoteApplicationEventScan(basePackageClasses = RemoteApplicationEvent.class)
+@RemoteApplicationEventScan(basePackageClasses = ReRemoteApplicationEvent.class)
 public class RabbitMqConfig {
 
 

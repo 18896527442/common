@@ -2,11 +2,10 @@ package com.ll.mq.rabbitmq.client;
 
 
 import cn.hutool.core.util.ObjectUtil;
-import com.ll.common.utils.StringUtils;
 import com.ll.mq.rabbitmq.event.EventObj;
 import com.ll.mq.rabbitmq.annotation.RabbitComponent;
 import com.ll.mq.rabbitmq.base.BaseMap;
-import com.ll.mq.rabbitmq.event.RemoteApplicationEvent;
+import com.ll.mq.rabbitmq.event.ReRemoteApplicationEvent;
 import com.ll.mq.rabbitmq.exchange.DelayExchangeBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -129,7 +128,7 @@ public class RabbitMqClient {
         EventObj eventObj = new EventObj();
         eventObj.setHandlerName(handlerName);
         eventObj.setBaseMap(baseMap);
-        publisher.publishEvent(new RemoteApplicationEvent(eventObj, busProperties.getId()));
+        publisher.publishEvent(new ReRemoteApplicationEvent(eventObj, busProperties.getId()));
     }
 
     /**

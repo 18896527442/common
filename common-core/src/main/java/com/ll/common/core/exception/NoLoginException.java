@@ -1,7 +1,7 @@
 package com.ll.common.core.exception;
 
 
-import com.smart.ll.core.constant.ResponseCode;
+import com.ll.common.core.constant.ResponseCode;
 
 /**
  * 未登陆异常

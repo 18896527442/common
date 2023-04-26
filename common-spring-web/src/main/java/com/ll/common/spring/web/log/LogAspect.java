@@ -1,10 +1,10 @@
 package com.ll.common.spring.web.log;
 
+import javassist.*;
+import javassist.bytecode.CodeAttribute;
+import javassist.bytecode.LocalVariableAttribute;
+import javassist.bytecode.MethodInfo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.javassist.*;
-import org.apache.ibatis.javassist.bytecode.CodeAttribute;
-import org.apache.ibatis.javassist.bytecode.LocalVariableAttribute;
-import org.apache.ibatis.javassist.bytecode.MethodInfo;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -32,7 +32,7 @@ public class LogAspect {
     /**
      * 切入点
      */
-    @Pointcut("@annotation(com.smart.common.spring.web.log.Log) ")
+    @Pointcut("@annotation(com.ll.common.spring.web.log.Log) ")
     public void entryPoint() {
         // 无需内容
     }
@@ -158,8 +158,9 @@ public class LogAspect {
         Field[] fields = obj.getClass().getDeclaredFields();
         String typeName = obj.getClass().getTypeName();
         for (String t : types) {
-            if(t.equals(typeName))
+            if(t.equals(typeName)){
                 return "";
+            }
         }
         StringBuilder sb = new StringBuilder();
         sb.append("【");

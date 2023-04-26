@@ -28,16 +28,16 @@ import java.util.function.Function;
 * @date: 2020/01/01 16:18
 */
 @Slf4j
-public class RedisCacheWriter implements RedisCacheWriter {
+public class ReRedisCacheWriter implements RedisCacheWriter {
 
     private final RedisConnectionFactory connectionFactory;
     private final Duration sleepTime;
 
-    public RedisCacheWriter(RedisConnectionFactory connectionFactory) {
+    public ReRedisCacheWriter(RedisConnectionFactory connectionFactory) {
         this(connectionFactory, Duration.ZERO);
     }
 
-    public RedisCacheWriter(RedisConnectionFactory connectionFactory, Duration sleepTime) {
+    public ReRedisCacheWriter(RedisConnectionFactory connectionFactory, Duration sleepTime) {
         Assert.notNull(connectionFactory, "ConnectionFactory must not be null!");
         Assert.notNull(sleepTime, "SleepTime must not be null!");
         this.connectionFactory = connectionFactory;
@@ -243,7 +243,7 @@ public class RedisCacheWriter implements RedisCacheWriter {
     }
 
     @Override
-    public RedisCacheWriter withStatisticsCollector(CacheStatisticsCollector cacheStatisticsCollector) {
+    public ReRedisCacheWriter withStatisticsCollector(CacheStatisticsCollector cacheStatisticsCollector) {
         return null;
     }
     //update-begin-author:zyf date:20220216 for:升级springboot版本到2.4.0+以后需要实现的方法*

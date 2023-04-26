@@ -10,7 +10,7 @@ import com.ll.common.sms.util.QiniuSmsManager;
 import com.ll.common.sms.dto.request.QuerySendDetailsRequestDto;
 import com.ll.common.sms.dto.request.SmsRequestDto;
 import com.ll.common.sms.dto.request.TemplateParamDto;
-import com.smart.common.sms.dto.response.*;
+import com.ll.common.sms.dto.response.*;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.sms.SmsManager;

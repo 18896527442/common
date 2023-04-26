@@ -1,6 +1,6 @@
 package com.ll.common.utils;
 
-import com.smart.common.annotation.EnumValidAnnotation;
+import com.ll.common.annotation.EnumValidAnnotation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

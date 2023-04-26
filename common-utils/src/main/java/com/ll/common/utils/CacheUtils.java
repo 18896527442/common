@@ -1,6 +1,6 @@
 package com.ll.common.utils;
 
-import com.smart.common.redis.RedisService;
+import com.ll.common.redis.RedisService;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RMap;

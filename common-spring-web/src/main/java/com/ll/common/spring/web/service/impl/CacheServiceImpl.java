@@ -1,7 +1,7 @@
 package com.ll.common.spring.web.service.impl;
 
 import com.ll.common.spring.web.service.CacheService;
-import com.smart.common.redis.RedisService;
+import com.ll.common.redis.RedisService;
 import com.ll.common.spring.web.cache.CacheCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

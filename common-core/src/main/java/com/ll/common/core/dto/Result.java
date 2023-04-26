@@ -1,6 +1,6 @@
 package com.ll.common.core.dto;
 
-import com.smart.ll.core.constant.ResponseCode;
+import com.ll.common.core.constant.ResponseCode;
 import lombok.Data;
 
 import java.io.Serializable;

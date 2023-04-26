@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
  * 监听远程事件,并分发消息到业务模块消息处理器
  */
 @Component
-public class BaseApplicationEvent implements ApplicationListener<RemoteApplicationEvent> {
+public class BaseApplicationEvent implements ApplicationListener<ReRemoteApplicationEvent> {
 
     @Override
-    public void onApplicationEvent(RemoteApplicationEvent jeecgRemoteApplicationEvent) {
+    public void onApplicationEvent(ReRemoteApplicationEvent jeecgRemoteApplicationEvent) {
         EventObj eventObj = jeecgRemoteApplicationEvent.getEventObj();
         if (ObjectUtil.isNotEmpty(eventObj)) {
             //获取业务模块消息处理器

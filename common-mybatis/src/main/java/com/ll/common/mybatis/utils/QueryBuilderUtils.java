@@ -23,7 +23,7 @@ public class QueryBuilderUtils {
 
 	public static <T>QueryWrapper<T> buildWrapper(QueryBuilderDTO paramObj){
 
-		SmartAssert.notNull(paramObj, "queryWrapperDTO不可为空！");
+		Assert.notNull(paramObj, "queryWrapperDTO不可为空！");
 		// 绑定默认参数
 		if(CollectionUtil.isNotEmpty(paramObj.getDefaultRules())){
 			buildDefaultParams(paramObj);
@@ -55,7 +55,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T> void buildRuleOrGroup(QueryWrapper<T> wrapper, String groupCondition, List<Rule> rules) {
-		SmartAssert.notEmpty(rules, "rules不可为空！");
+		Assert.notEmpty(rules, "rules不可为空！");
 		for (Rule rule : rules) {
 			if(CollectionUtil.isNotEmpty(rule.getRules())){
 				switch (rule.getCondition()) {
@@ -154,7 +154,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T>QueryWrapper<T> buildSort (QueryWrapper<T> wrapper, String sort) {
-		SmartAssert.notNull(wrapper, "wrapper不可为空！");
+		Assert.notNull(wrapper, "wrapper不可为空！");
 		//TODO
 		return wrapper;
 	}
@@ -168,7 +168,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T>QueryWrapper<T> buildOrder (QueryWrapper<T> wrapper, String order) {
-		SmartAssert.notNull(wrapper, "wrapper不可为空！");
+		Assert.notNull(wrapper, "wrapper不可为空！");
 		//TODO
 		return wrapper;
 	}

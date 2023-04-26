@@ -2,7 +2,7 @@ package com.ll.common.mybatis.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.ll.common.redis.annotation.CachePut;
+import com.ll.common.redis.annotation.SmtCachePut;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-public interface BaseMapper<T> extends BaseMapper<T> {
+public interface SmartBaseMapper<T> extends BaseMapper<T> {
     /**
      * 重新更新方法，返回实体对象
      * @param entity

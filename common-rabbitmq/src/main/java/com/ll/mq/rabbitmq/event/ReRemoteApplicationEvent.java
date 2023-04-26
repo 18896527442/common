@@ -10,19 +10,19 @@ import org.springframework.cloud.bus.event.RemoteApplicationEvent;
  * @date :2020-11-10
  */
 @Data
-public class RemoteApplicationEvent extends RemoteApplicationEvent {
+public class ReRemoteApplicationEvent extends RemoteApplicationEvent {
 
-    private RemoteApplicationEvent() {
+    private ReRemoteApplicationEvent() {
     }
 
     private EventObj eventObj;
 
-    public RemoteApplicationEvent(EventObj source, String originService, String destinationService) {
+    public ReRemoteApplicationEvent(EventObj source, String originService, String destinationService) {
         super(source, originService, destinationService);
         this.eventObj = source;
     }
 
-    public RemoteApplicationEvent(EventObj source, String originService) {
+    public ReRemoteApplicationEvent(EventObj source, String originService) {
         super(source, originService, "");
         this.eventObj = source;
     }

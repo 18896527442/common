@@ -28,7 +28,7 @@ public class PageResponse<T> implements Serializable {
     //结果集
     private List<T> list;
     //其他参数
-    private Map<Object,Object> params;
+    private Map<T,T> params;
 
     public PageResponse() {
     }
@@ -120,11 +120,11 @@ public class PageResponse<T> implements Serializable {
         this.list = list;
     }
 
-    public Map<Object, Object> getParams() {
+    public Map<T, T> getParams() {
         return params;
     }
 
-    public void setParams(Map<Object, Object> params) {
+    public void setParams(Map<T, T> params) {
         this.params = params;
     }
 

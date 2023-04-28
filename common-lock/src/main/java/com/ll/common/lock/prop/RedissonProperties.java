@@ -11,7 +11,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2020-11-11
  */
 @Data
-@ConfigurationProperties(prefix = "smart.redisson")
+@ConfigurationProperties(prefix = "spring.redisson")
 public class RedissonProperties {
 
     /**

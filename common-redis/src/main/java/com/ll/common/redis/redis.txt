@@ -1,0 +1,24 @@
+#redis配置文件
+spring:
+  redis:
+    database: 0
+    host: 192.168.101.101
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+        timeout: 3600
+    password: GMab8C6gsWB08xTE
+    port: 6379
+
+
+
+#redisson
+smart:
+      redisson:
+        address: 192.168.101.101:6379
+        password: GMab8C6gsWB08xTE
+        type: STANDALONE
+        enabled: true

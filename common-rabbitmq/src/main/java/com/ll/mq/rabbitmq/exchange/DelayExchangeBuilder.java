@@ -15,11 +15,11 @@ public class DelayExchangeBuilder {
     /**
      * 默认延迟消息交换器
      */
-    public final static  String DEFAULT_DELAY_EXCHANGE = "smart.delayed.exchange";
+    public final static  String DEFAULT_DELAY_EXCHANGE = "delayed.exchange";
     /**
      * 普通交换器
      */
-    public final static  String DELAY_EXCHANGE = "smart.direct.exchange";
+    public final static  String DELAY_EXCHANGE = "direct.exchange";
 
     /**
      * 构建延迟消息交换器

@@ -60,9 +60,9 @@ public class RabbitMqClient {
 
     @Bean
     public void initQueue() {
-        Map<String, Object> beansWithRqbbitComponentMap = this.applicationContext.getBeansWithAnnotation(RabbitComponent.class);
+        Map<String, Object> beansWithRabbitComponentMap = this.applicationContext.getBeansWithAnnotation(RabbitComponent.class);
         Class<? extends Object> clazz = null;
-        for (Map.Entry<String, Object> entry : beansWithRqbbitComponentMap.entrySet()) {
+        for (Map.Entry<String, Object> entry : beansWithRabbitComponentMap.entrySet()) {
             log.info("初始化队列............");
             //获取到实例对象的class信息
             clazz = entry.getValue().getClass();

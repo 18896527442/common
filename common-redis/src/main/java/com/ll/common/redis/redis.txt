@@ -17,8 +17,10 @@ spring:
 
 #redisson
 smart:
-      redisson:
-        address: 192.168.101.101:6379
-        password: GMab8C6gsWB08xTE
-        type: STANDALONE
-        enabled: true
+   redisson:
+   address: 192.168.101.101:6379
+   password: GMab8C6gsWB08xTE
+   type: STANDALONE
+   enabled: true
+
+com.ll.common.lock.prop.RedissonProperties中@ConfigurationProperties(prefix = "spring.redisson")前缀

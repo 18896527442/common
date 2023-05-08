@@ -10,7 +10,7 @@ import com.ll.common.core.exception.DataErrorException;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class Assert {
+public class AssertUtil {
 
     /**
      * 断言是否为真，如果为 {@code false} 抛出给定的异常<br>

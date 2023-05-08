@@ -3,7 +3,7 @@ package com.ll.common.mybatis.utils;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.ll.common.core.utils.Assert;
+import com.ll.common.core.utils.AssertUtil;
 import com.ll.common.mybatis.dto.QueryBuilderDTO;
 import com.ll.common.mybatis.dto.Rule;
 import com.ll.common.mybatis.enums.ConditionEnum;
@@ -23,7 +23,7 @@ public class QueryBuilderUtils {
 
 	public static <T>QueryWrapper<T> buildWrapper(QueryBuilderDTO paramObj){
 
-		Assert.notNull(paramObj, "queryWrapperDTO不可为空！");
+		AssertUtil.notNull(paramObj, "queryWrapperDTO不可为空！");
 		// 绑定默认参数
 		if(CollectionUtil.isNotEmpty(paramObj.getDefaultRules())){
 			buildDefaultParams(paramObj);
@@ -55,7 +55,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T> void buildRuleOrGroup(QueryWrapper<T> wrapper, String groupCondition, List<Rule> rules) {
-		Assert.notEmpty(rules, "rules不可为空！");
+		AssertUtil.notEmpty(rules, "rules不可为空！");
 		for (Rule rule : rules) {
 			if(CollectionUtil.isNotEmpty(rule.getRules())){
 				switch (rule.getCondition()) {
@@ -154,7 +154,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T>QueryWrapper<T> buildSort (QueryWrapper<T> wrapper, String sort) {
-		Assert.notNull(wrapper, "wrapper不可为空！");
+		AssertUtil.notNull(wrapper, "wrapper不可为空！");
 		//TODO
 		return wrapper;
 	}
@@ -168,7 +168,7 @@ public class QueryBuilderUtils {
 	 * @return
 	 */
 	public static <T>QueryWrapper<T> buildOrder (QueryWrapper<T> wrapper, String order) {
-		Assert.notNull(wrapper, "wrapper不可为空！");
+		AssertUtil.notNull(wrapper, "wrapper不可为空！");
 		//TODO
 		return wrapper;
 	}

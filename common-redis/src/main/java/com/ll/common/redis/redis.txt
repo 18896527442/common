@@ -16,7 +16,7 @@ spring:
 
 
 #redisson
-smart:
+spring:
    redisson:
    address: 192.168.101.101:6379
    password: GMab8C6gsWB08xTE

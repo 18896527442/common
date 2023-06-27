@@ -159,7 +159,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      * @param date2
      * @return
      */
-    public int differentDays(Date date1,Date date2)
+    public static int differentDays(Date date1,Date date2)
     {
         Calendar cal1 = Calendar.getInstance();
         cal1.setTime(date1);
